@@ -94,7 +94,14 @@ class AuthorizeNet_Pay extends AuthorizeNet_AuthorizeNet
 			@@$parametersX['prod'] .= ' ' . $value['multiple'] . ' x ' . $value['subscription_label'];
 			@$parametersX['price'] += floatval( $value['price'] * $value['multiple'] );
 			$counter++;
-		}
+        }
+        
+        $amount = $data['total_price'] ? : ( $this->getParameter( 'amount' ) ? : $parametersX['price'] );
+        if( empty( $amount ) || $amount <= 0 )
+        {
+            $this->_objectData = array( 'badnews' => 'Invalid Amount' );
+            return false;
+        }
         
         $parameters = array();
         $parameters['createTransactionRequest'] = array();
@@ -104,7 +111,7 @@ class AuthorizeNet_Pay extends AuthorizeNet_AuthorizeNet
         $parameters['createTransactionRequest']['refId'] = $parametersX['order_number'];
         $parameters['createTransactionRequest']['transactionRequest'] = array();
         $parameters['createTransactionRequest']['transactionRequest']['transactionType'] = 'authCaptureTransaction';
-        $parameters['createTransactionRequest']['transactionRequest']['amount'] = $data['total_price'] ? : ( $this->getParameter( 'amount' ) ? : $parametersX['price'] );
+        $parameters['createTransactionRequest']['transactionRequest']['amount'] = $amount;
         $parameters['createTransactionRequest']['transactionRequest']['currencyCode'] = AuthorizeNet_Settings::retrieve( 'currency' ) ? : 'USD';
         $parameters['createTransactionRequest']['transactionRequest']['payment'] = array();
         $parameters['createTransactionRequest']['transactionRequest']['payment']['creditCard'] = array();
