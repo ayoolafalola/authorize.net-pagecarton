@@ -2,11 +2,6 @@
 <DOCUMENT_ELEMENT table_name="extension" creation_time="1586310479" modified_time="1586310479" table_version="0.18" module_version="1.00" table_class="Ayoola_Extension" creation_ip="0">
   <RECORDS autoId="2">
     <TABLE_ROW ROW_ID="1">
-      <TABLE_FIELD FIELD_KEY="extension_title"><![CDATA[AuthorizeNet Payment]]></TABLE_FIELD>
-      <TABLE_FIELD FIELD_KEY="modules"><![CDATA[[&quot;\/AuthorizeNet\/Pay.php&quot;,&quot;\/AuthorizeNet\/AuthorizeNet.php&quot;,&quot;\/AuthorizeNet\/Settings.php&quot;]]]></TABLE_FIELD>
-      <TABLE_FIELD FIELD_KEY="settings_class"><![CDATA[AuthorizeNet_Settings]]></TABLE_FIELD>
-      <TABLE_FIELD FIELD_KEY="databases"><![CDATA[[&quot;\/Application\/Subscription\/Checkout\/checkoutoption.xml&quot;]]]></TABLE_FIELD>
-      <TABLE_FIELD FIELD_KEY="documents"><![CDATA[[&quot;\/public\/2020\/04\/07\/image-png.png&quot;]]]></TABLE_FIELD>
       <TABLE_FIELD FIELD_KEY="pages"><![CDATA[null]]></TABLE_FIELD>
       <TABLE_FIELD FIELD_KEY="extension_name"><![CDATA[AuthorizeNet_payment]]></TABLE_FIELD>
       <TABLE_FIELD FIELD_KEY="status"><![CDATA[]]></TABLE_FIELD>
@@ -17,11 +12,16 @@
       <TABLE_FIELD FIELD_KEY="article_url"><![CDATA[]]></TABLE_FIELD>
       <TABLE_FIELD FIELD_KEY="extension_id"><![CDATA[1586310479-0-1]]></TABLE_FIELD>
       <TABLE_FIELD FIELD_KEY="creation_time"><![CDATA[1586310479]]></TABLE_FIELD>
-      <TABLE_FIELD FIELD_KEY="modified_time"><![CDATA[]]></TABLE_FIELD>
       <TABLE_FIELD FIELD_KEY="__user_id"><![CDATA[1554892638.1731]]></TABLE_FIELD>
-      <TABLE_FIELD FIELD_KEY="__update_user_id"><![CDATA[null]]></TABLE_FIELD>
       <TABLE_FIELD FIELD_KEY="__user_agent_id"><![CDATA[]]></TABLE_FIELD>
       <TABLE_FIELD FIELD_KEY="__ip"><![CDATA[{&quot;REMOTE_ADDR&quot;:&quot;::1&quot;,&quot;HTTP_CLIENT_IP&quot;:&quot;&quot;,&quot;HTTP_X_FORWARDED_FOR&quot;:&quot;&quot;}]]></TABLE_FIELD>
+      <TABLE_FIELD FIELD_KEY="extension_title"><![CDATA[AuthorizeNet Payment]]></TABLE_FIELD>
+      <TABLE_FIELD FIELD_KEY="modules"><![CDATA[[&quot;\/AuthorizeNet\/AuthorizeNet.php&quot;,&quot;\/AuthorizeNet\/CCCollect.php&quot;,&quot;\/AuthorizeNet\/Pay.php&quot;,&quot;\/AuthorizeNet\/Transaction.php&quot;,&quot;\/AuthorizeNet\/Transaction\/Abstract.php&quot;,&quot;\/AuthorizeNet\/Transaction\/Creator.php&quot;,&quot;\/AuthorizeNet\/Transaction\/Delete.php&quot;,&quot;\/AuthorizeNet\/Transaction\/Editor.php&quot;,&quot;\/AuthorizeNet\/Transaction\/List.php&quot;]]]></TABLE_FIELD>
+      <TABLE_FIELD FIELD_KEY="settings_class"><![CDATA[AuthorizeNet_Settings]]></TABLE_FIELD>
+      <TABLE_FIELD FIELD_KEY="databases"><![CDATA[[&quot;\/Application\/Subscription\/Checkout\/checkoutoption.xml&quot;]]]></TABLE_FIELD>
+      <TABLE_FIELD FIELD_KEY="documents"><![CDATA[[&quot;\/layout\/default\/AuthorizeNet\/CCCollect.html&quot;,&quot;\/layout\/default\/AuthorizeNet\/icon.png&quot;,&quot;\/layout\/default\/AuthorizeNet\/logo.png&quot;,&quot;\/layout\/default\/AuthorizeNet\/payment.css&quot;,&quot;\/layout\/default\/AuthorizeNet\/payment.js&quot;]]]></TABLE_FIELD>
+      <TABLE_FIELD FIELD_KEY="modified_time"><![CDATA[1611331698]]></TABLE_FIELD>
+      <TABLE_FIELD FIELD_KEY="__update_user_id"><![CDATA[[1554892638.173078]]]></TABLE_FIELD>
     </TABLE_ROW>
   </RECORDS>
   <TABLE_SETTINGS>
