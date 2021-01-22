@@ -149,9 +149,9 @@ class AuthorizeNet_Pay extends AuthorizeNet_AuthorizeNet
             $this->setViewContent( '<p class="goodnews">' . $result['transactionResponse']['messages'][0]['description'] . '</p>' );
             $ex = self::checkStatus( $parametersX['order_number'] );
         }
-        else
+        elseif( ! empty( $result['transactionResponse']['errors'][0]['errorText'] ) )
         {
-
+            $this->_objectData['badnews'] = $result['transactionResponse']['errors'][0]['errorText'];
         }
 	}
 
@@ -183,7 +183,6 @@ class AuthorizeNet_Pay extends AuthorizeNet_AuthorizeNet
         $result = AuthorizeNet_Transaction::getInstance()->selectOne( null, array( 'order_id' => $orderNumber ) );
         if( $result['response_code'] === '1' )
 		{
-			//	Payment was not successful.
 			$orderInfo['order_status'] = 99;
 		}
 		else
